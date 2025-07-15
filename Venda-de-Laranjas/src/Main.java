@@ -5,8 +5,8 @@
  * @since 1.0
  * @version 1.0
  *
- *  como criar: clicar no menu - Tools - Generete JavaDoc - escolher o diretorio de saida - create
  */
+// como criar: clicar no menu - Tools - Generete JavaDoc - escolher o diretorio de saida - create
 // Exemplo de Operador ternário
 import java.util.Scanner;
 
