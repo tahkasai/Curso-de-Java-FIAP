@@ -1,3 +1,12 @@
+/**
+ * Página inicial do programa - no javaDoc é onde o dev deve colocar as regras de negócios, comentários importantes, para relembrar e facilitar futuros colaboradores do projeto
+ *
+ * @author tainá
+ * @since 1.0
+ * @version 1.0
+ *
+ *  como criar: clicar no menu - Tools - Generete JavaDoc - escolher o diretorio de saida - create
+ */
 // Exemplo de Operador ternário
 import java.util.Scanner;
 
