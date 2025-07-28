@@ -1,4 +1,3 @@
-package br.com.fiap.produtos;
 
 import br.com.fiap.produtos.Model.Categoria;
 import br.com.fiap.produtos.Model.Produto;
