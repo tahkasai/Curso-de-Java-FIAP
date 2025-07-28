@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.util.List;
 import java.util.Vector;
 
-public class CategoriaCollectionRepository {
+public class CategoriaRepository {
 
     private static List<Categoria> categorias;
 

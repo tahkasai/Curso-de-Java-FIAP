@@ -1,8 +1,9 @@
+package br.com.fiap.produtos;
 
 import br.com.fiap.produtos.Model.Categoria;
 import br.com.fiap.produtos.Model.Produto;
-import br.com.fiap.produtos.Repository.CategoriaCollectionRepository;
-import br.com.fiap.produtos.Repository.ProdutoCollectionRepository;
+import br.com.fiap.produtos.Repository.CategoriaRepository;
+import br.com.fiap.produtos.Repository.ProdutoRepository;
 import br.com.fiap.produtos.View.CategoriaView;
 import br.com.fiap.produtos.View.Opcao;
 import br.com.fiap.produtos.View.OpcaoView;
@@ -14,7 +15,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        List<Categoria> categorias = CategoriaCollectionRepository.findAll();
+        List<Categoria> categorias = CategoriaRepository.findAll();
 
         Opcao opcao = null;
 
@@ -32,7 +33,7 @@ public class Main {
 
     private static void consultarprodutoporcategoria() {
         Categoria categoria = CategoriaView.select(null);
-        List<Produto> produtos = ProdutoCollectionRepository.findByCategoria(categoria);
+        List<Produto> produtos = ProdutoRepository.findByCategoria(categoria);
         if (produtos.size() == 0)
             JOptionPane.showMessageDialog(null, "Não encontramos produtos cadastrados para a categoria " + categoria.getNome());
         produtos.forEach(System.out::println);
@@ -40,7 +41,7 @@ public class Main {
     }
 
     private static void consultarprodutoporid() {
-        Long id = 0l;
+        Long id = 0L;
         do {
             try {
                 id = Long.parseLong(JOptionPane.showInputDialog("Informe o id do produto"));
@@ -49,7 +50,7 @@ public class Main {
             }
         } while (id <= 0);
 
-        Categoria p = ProdutoCollectionRepository.findById(id);
+        Produto p = ProdutoRepository.findById(id);
         if (p != null) {
             ProdutoView.show(p);
         } else {
@@ -66,14 +67,14 @@ public class Main {
     private static void cadastrarproduto() {
 
         Produto produto = ProdutoView.form();
-        ProdutoCollectionRepository.save(produto);
+        ProdutoRepository.save(produto);
         ProdutoView.sucesso(produto);
     }
 
     public static void cadastrarCategoria() {
         CategoriaView view = new CategoriaView();
-        Categoria categoria = view.form();
-        CategoriaCollectionRepository.save(categoria);
+        Categoria categoria = CategoriaView.form();
+        CategoriaRepository.save(categoria);
         view.sucesso(categoria);
     }
 }

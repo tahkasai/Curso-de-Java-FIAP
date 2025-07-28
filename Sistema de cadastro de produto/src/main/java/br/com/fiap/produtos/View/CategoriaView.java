@@ -1,13 +1,13 @@
 package br.com.fiap.produtos.View;
 
 import br.com.fiap.produtos.Model.Categoria;
-import br.com.fiap.produtos.Repository.CategoriaCollectionRepository;
+import br.com.fiap.produtos.Repository.CategoriaRepository;
 
 import javax.swing.*;
 
 public class CategoriaView {
 
-    static CategoriaCollectionRepository repository;
+    static CategoriaRepository repository;
 
     public static Categoria select(Categoria categoria){
         //@formatter.off

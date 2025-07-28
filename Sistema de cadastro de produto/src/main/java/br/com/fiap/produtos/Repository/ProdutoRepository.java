@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Vector;
 
-public class ProdutoCollectionRepository {
+public class ProdutoRepository {
     private static List<Produto> produtos;
 
     static {
@@ -18,7 +18,7 @@ public class ProdutoCollectionRepository {
         Produto celular = new Produto();
         celular.setNome("Iphone 13")
                 .setDescricao("Aparelho celular da Apple")
-                .setCategoria(CategoriaCollectionRepository.findById(2l))
+                .setCategoria(CategoriaRepository.findById(2l))
                 .setDataDeCadastro(LocalDateTime.now())
                 .setPreco(BigDecimal.valueOf(12000));
 
@@ -29,10 +29,10 @@ public class ProdutoCollectionRepository {
     public  static List<Produto> findAll(){return produtos;}
     
     // Exibir por Id
-    public static Categoria findById(Long id){
+    public static Produto findById(Long id){
         return Objects.requireNonNull(produtos.stream()
                 .filter(p -> p.getId().equals(id))
-                .findFirst().orElse(null)).getCategoria();
+                .findFirst().orElse(null));
     }
     // salvar produto
     public static Produto save(Produto produto) {

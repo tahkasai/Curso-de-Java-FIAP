@@ -2,7 +2,7 @@ package br.com.fiap.produtos.View;
 
 import br.com.fiap.produtos.Model.Categoria;
 import br.com.fiap.produtos.Model.Produto;
-import br.com.fiap.produtos.Repository.ProdutoCollectionRepository;
+import br.com.fiap.produtos.Repository.ProdutoRepository;
 
 import javax.swing.*;
 import java.math.BigDecimal;
@@ -18,7 +18,7 @@ public class ProdutoView {
                 "Menu",
                 JOptionPane.QUESTION_MESSAGE,
                 null, // icone
-                ProdutoCollectionRepository.findAll().toArray(), // Número da opção
+                ProdutoRepository.findAll().toArray(), // Número da opção
                 1);
 
         return ret;
