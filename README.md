@@ -9,4 +9,4 @@
 - <b>Projeto</b>: Sistema de Cadastro de Produtos.
 
 Link do curso: <a href="https://on.fiap.com.br/nano-courses/course/?id=12949">Java Development</a><br>
-Certificado: <a>publicação LinkedIn</a>
+<!-- Certificado: <a>publicação LinkedIn</a>-->
